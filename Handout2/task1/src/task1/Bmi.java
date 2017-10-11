@@ -1,6 +1,6 @@
 //Package name for the current class
 package task1;
-
+//Import DecimalFormat class
 import java.text.DecimalFormat;
 
 //Creation of the class Bmi
