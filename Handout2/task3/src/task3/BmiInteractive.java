@@ -15,7 +15,7 @@ public class BmiInteractive {
 		//Print a message for the user to enter his/her mass
 		System.out.println("Please enter your weight (kg):");
 		//Read the mass value entered by the user
-		float mass = reader.nextFloat();
+		double mass = reader.nextDouble();
 		//Print a message for the user to enter his/her height
 		System.out.println("Please enter your height (m):");
 		//Read the height value entered by the user

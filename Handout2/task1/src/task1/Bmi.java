@@ -18,6 +18,7 @@ public class Bmi {
 		float height2=1.70f;
 		//Float variable for second mass
 		float mass2=80;
+		
 		//print out the rounded result of the first BMI
 		System.out.println("BMI 1: "+df.format(mass1/Math.pow(height1, 2)));
 		//print out the rounded result of the second BMI
