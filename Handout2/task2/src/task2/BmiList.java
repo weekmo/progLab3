@@ -15,6 +15,7 @@ public class BmiList {
 			if(mass==65)
 				System.out.print("Current ------> ");
 			//Format and printout the result for BMI
+			//optimal 18.5 - 24.9
 			System.out.println("BMI for "+mass+"kg : "+df.format(mass/Math.pow(height, 2)));
 		}
 	}

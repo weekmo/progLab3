@@ -19,9 +19,10 @@ public class BmiInteractive {
 		//Print a message for the user to enter his/her height
 		System.out.println("Please enter your height (m):");
 		//Read the height value entered by the user
-		float height=reader.nextFloat();
+		double height = reader.nextDouble();
 		//Format and printout the result for BMI
 		System.out.println("Your BMI is: "+df.format(mass/Math.pow(height, 2)));
+		
 	}
 
 }
