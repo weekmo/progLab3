@@ -1,30 +1,30 @@
-Q1,1st Ans,2nd Ans,3rd Ans,4th Ans,2
-Q2,1st Ans,2nd Ans,3rd Ans,4th Ans,3
-Q3,1st Ans,2nd Ans,3rd Ans,4th Ans,4
-Q4,1st Ans,2nd Ans,3rd Ans,4th Ans,2
-Q5,1st Ans,2nd Ans,3rd Ans,4th Ans,1
-Q6,1st Ans,2nd Ans,3rd Ans,4th Ans,1
-Q7,1st Ans,2nd Ans,3rd Ans,4th Ans,3
-Q8,1st Ans,2nd Ans,3rd Ans,4th Ans,4
-Q9,1st Ans,2nd Ans,3rd Ans,4th Ans,3
-Q10,1st Ans,2nd Ans,3rd Ans,4th Ans,1
-Q11,1st Ans,2nd Ans,3rd Ans,4th Ans,3
-Q12,1st Ans,2nd Ans,3rd Ans,4th Ans,3
-Q13,1st Ans,2nd Ans,3rd Ans,4th Ans,3
-Q14,1st Ans,2nd Ans,3rd Ans,4th Ans,1
-Q15,1st Ans,2nd Ans,3rd Ans,4th Ans,2
-Q16,1st Ans,2nd Ans,3rd Ans,4th Ans,3
-Q17,1st Ans,2nd Ans,3rd Ans,4th Ans,4
-Q18,1st Ans,2nd Ans,3rd Ans,4th Ans,4
-Q19,1st Ans,2nd Ans,3rd Ans,4th Ans,2
-Q20,1st Ans,2nd Ans,3rd Ans,4th Ans,4
-Q21,1st Ans,2nd Ans,3rd Ans,4th Ans,1
-Q22,1st Ans,2nd Ans,3rd Ans,4th Ans,3
-Q23,1st Ans,2nd Ans,3rd Ans,4th Ans,3
-Q24,1st Ans,2nd Ans,3rd Ans,4th Ans,2
-Q25,1st Ans,2nd Ans,3rd Ans,4th Ans,3
-Q26,1st Ans,2nd Ans,3rd Ans,4th Ans,4
-Q27,1st Ans,2nd Ans,3rd Ans,4th Ans,1
-Q28,1st Ans,2nd Ans,3rd Ans,4th Ans,1
-Q29,1st Ans,2nd Ans,3rd Ans,4th Ans,2
-Q30,1st Ans,2nd Ans,3rd Ans,4th Ans,2
+"12 members at a conference shook hands with each other before & after the meeting. How many total number of hand shakes occurred?",100,132,145,144,2
+The day after the day after tomorrow is four days before Monday. What day is it today?,Monday,Tuesday,Wednesday,Thursday,1
+6121135 is to flame as 21215120 is to ?,voice,bald,bloat,castle,3
+Forest is to tree as tree is to ?,plant,leaf,twig,mangrove,2
+"who is sixteen years old is four times as old as Mary's brother. How old will Mary be when she is twice as old as her brother?",20,24,25,26,2
+"If you rearrange the letters ""CIFAIPC"" you would have the name of a(n):",city,animal,ocean,river,3
+Choose the number that is 1/4 of 1/2 of 1/5 of 200:,2,5,10,25,2
+John needs 13 bottles of water from the store. John can only carry 3 at a time. What's the minimum number of trips John needs to make to the store?,3,4,4 1/2,5,4
+"Choose the word most similar to ""Trustworthy"":",resolute,tenacity,relevant,reliable,4
+"If you rearrange the letters ""LNGEDNA"" you have the name of a(n):",animal,country,state,city,2
+Which one of the following things is the least like the others?,poem,novel,painting,flower,4
+What is the missing number in the given sequence ?     1-8-27-?-125-216,36,45,46,64,4
+Which one of the five choices makes the best comparison? Finger is to Hand as Leaf is to :,twig,tree,branch,bloosom,1
+Which one of the five choices makes the best comparison? PEACH is to HCAEP as 46251 is to:,25641,26451,12654,15264,4
+"If 10 people can do a piece of work in 5 days and working 2 hours a day how long will 2 people take to do the same work working 5 hours a day?",8,5,10,12,3
+Which is a reserved word in the Java programming language?,method,native,reference,array,2
+Which is a valid keyword in java?,interface,string,float,unsigned,1
+What is the numerical range of a char?,128 to 127             126,(215) to (215) - 1,0 to 65535, 0  to 32767,4
+What is the name of the method used to start a thread execution?,init();,start();,run();,resume();,2
+Which will contain the body of the thread?,run();,start();,stop();,main();,1
+"Which class or interface defines the wait() - notify() and notifyAll() methods?",Object,Thread,Runnable,Class,1
+Which of the given will not directly cause a thread to stop?,notify(),wait(),sleep(),InputStream access,1
+Which of the given will directly stop the execution of a Thread?,wait(),notify(),notifyall(),sleep(),1
+"What is the value of ""d"" after this line of code has been executed? double d=Math.round(2.5+Math.random());",2,3,4,2.5,2
+You want a class to have access to members of another class in the same package. Which is the most restrictive access that accomplishes this objective?,public,private,protected,default access,4
+"Given a method in a protected class what access modifier do you use to restrict access to that method to only the other members of the same class?",final,static,private,volatile,3
+Which of the given languages is more suited to a structured program?,PL/1,FORTRAN,BASIC,PASCAL,4
+Which of the given computer language is used for artificial intelligence?,FORTRAN,PROLOG,C,COBOL,2
+A section of code to which control is transferred when a processor is interrupted is known as,M,SVC,IP,MDR,1
+The time required for the fetching and execution of one simple machine instruction is,Delay time,CPU cycle,Real time,Seek time,2

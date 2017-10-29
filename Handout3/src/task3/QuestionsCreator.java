@@ -24,8 +24,8 @@ public class QuestionsCreator {
 	public void startQuiz() {
 		reader = new Scanner(System.in);
 		System.out.println("***** Welcome to the Quiz and good luck ;) ******");
-		System.out.println("You will get 5 questions\n");
-		System.out.println("Please select the correct answer by typing the number!");
+		System.out.println("***** You will get 5 questions *****\n");
+		System.out.println("Please select the correct answer by typing the number!\n(if you put wrong number, you will loose)\n");
 		Question question;
 		boolean result = true;
 		int answerNum=0;
@@ -33,7 +33,7 @@ public class QuestionsCreator {
 		for(int i =0; i<5;i++) {
 			answersNumbers=1;
 			question = questionList.getRandomQuestion();
-			System.out.println(question.getText());
+			System.out.println("Question ("+(i+1)+"):\n"+question.getText());
 			//System.out.println(question.getCorrectAnswer());
 			for(String answer:question.getAnswers()) {
 				System.out.println("["+answersNumbers+"]"+answer);
