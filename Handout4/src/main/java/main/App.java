@@ -14,6 +14,9 @@ public class App
     {
     	//**** Task 1 ****
     	new Task1Executor();
-    	new Task2Executor();
+    	
+    	//**** Task 1 ****
+    	new Task2Executor("patients_data.csv");
+    	//new Task2Executor().fromScratch("patients_data.csv");
     }
 }
