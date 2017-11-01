@@ -1,4 +1,4 @@
-package com.fraunhofer.scai;
+package task1;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -10,25 +10,17 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
-import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
-
-import task1.Participant;
-
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
+public class Task1Executor {
+	public Task1Executor()
     {
     	ArrayList<Participant> participantsList=readParticipantsCSVFile("patients_data.csv");
     	for(Participant p:participantsList) {
     		System.out.println(p.getId());
     	}
-    	writeToParticipantsCSVFile(participantsList, "test.csv");
+    	writeToParticipantsCSVFile(participantsList, "patients_data_withIDs.csv");
     }
-    public static String generateID(String lastName,String firstName,String dateOfBirth) {
+    
+    private static String generateID(String lastName,String firstName,String dateOfBirth) {
 		String keyText=lastName+firstName+dateOfBirth;
 		MessageDigest messageDigest=null;
 		try {
