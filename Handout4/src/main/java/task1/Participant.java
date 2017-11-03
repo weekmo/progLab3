@@ -1,6 +1,11 @@
 package task1;
 
+/*
+ * Participant class
+ */
+
 public class Participant {
+	// class properties 
 	private String id;
 	private String lastName;
 	private String firstName;
@@ -9,6 +14,7 @@ public class Participant {
 	private double height;
 	private double iq;
 	
+	//class constructors 
 	public Participant(String id,String lastName,String firstName,String dateOfBirth) {
 		this.lastName=lastName;
 		this.firstName=firstName;
@@ -22,7 +28,7 @@ public class Participant {
 		this.height=height;
 		this.iq=iq;
 	}
-
+	// Properties getter and setter
 	public String getId() {
 		return id;
 	}
@@ -54,21 +60,27 @@ public class Participant {
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
+	
 	public double getWeight() {
 		return weight;
 	}
+	
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
+	
 	public double getHeight() {
 		return height;
 	}
+	
 	public void setHeight(double height) {
 		this.height = height;
 	}
+	
 	public double getIq() {
 		return iq;
 	}
+	
 	public void setIq(double iq) {
 		this.iq = iq;
 	}

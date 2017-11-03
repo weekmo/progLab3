@@ -11,6 +11,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 public class Task1Executor {
+	
 	public Task1Executor()
     {
     	ArrayList<Participant> participantsList=readParticipantsCSVFile("patients_data.csv");
@@ -32,14 +33,14 @@ public class Task1Executor {
         return new BigInteger(1,messageDigest.digest()).toString(16);
 	}
     
-    public static ArrayList<Participant> readParticipantsCSVFile(String fileName){
+    public static ArrayList<Participant> readParticipantsCSVFile(String fileName,String separator){
     	ArrayList<Participant> participantsList = new ArrayList<Participant>();
     	try {
 			BufferedReader reader = new BufferedReader(new FileReader("data/"+fileName));
 			String line;
 			String[] data;
 			while((line=reader.readLine()) !=null) {
-				data=line.split(";");
+				data=line.split(separator);
 				participantsList.add(new Participant(generateID(data[0], data[1], data[2]),
 						data[0], data[1], data[2],Double.parseDouble(data[3]),
 						Double.parseDouble(data[4]),Double.parseDouble(data[5])));
@@ -52,6 +53,10 @@ public class Task1Executor {
     	catch (Exception e) {System.out.println(e.getMessage());}
     	
     	return null;
+    }
+    
+    public static ArrayList<Participant> readParticipantsCSVFile(String fileName){
+    	return readParticipantsCSVFile(fileName, ";");
     }
     
     public static void writeToParticipantsCSVFile(ArrayList<Participant> participants,String fileName) {
@@ -70,4 +75,6 @@ public class Task1Executor {
 		}
     	
     }
+    
+    
 }

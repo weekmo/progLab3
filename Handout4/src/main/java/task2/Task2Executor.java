@@ -6,6 +6,7 @@ import task1.*;
 
 public class Task2Executor {
 	public Task2Executor() {}
+	
 	public Task2Executor(String fileName) {
 		ArrayList<Participant> patients = Task1Executor.readParticipantsCSVFile(fileName);
 		DescriptiveStatistics weights=new DescriptiveStatistics();
@@ -28,6 +29,7 @@ public class Task2Executor {
 		
 		//fromScratch(fileName);
 	}
+	
 	public void fromScratch(String fileName) {
 		ArrayList<Participant> patients = Task1Executor.readParticipantsCSVFile(fileName);
 		//double[] weights,heights;
