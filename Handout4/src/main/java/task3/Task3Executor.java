@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 
@@ -19,11 +20,37 @@ public class Task3Executor {
 	
 	//Class constructor
 	public Task3Executor(String[] args) {
+		//New ArrayList of PPI
 		ArrayList<PPI> ppiList=null;
-		if(args.length==0) ppiList=this.findProteins("A1CF", "FIsInGene.txt");
+		//if there is no parameters submission (main function).
+		if(args.length==0) {
+			try {
+				Scanner reader = new Scanner(System.in);
+				String[] line=reader.nextLine().split(" ");
+				//no parameter
+				if(line.length==0) {
+					System.out.println("Please enter gene name and/or direction!");
+				}
+				//one parameter
+				else if(line.length==1) {
+					ppiList=this.findProteins(line[0], "FIsInGene.txt");
+				}
+				//two parameters or more (it will take only two)
+				else {
+					ppiList=this.findProteins(this.findProteins(line[0], "FIsInGene.txt"), line[1]);
+				}
+				reader.close();
+			}
+			catch(Exception e) {System.out.println(e.getMessage());}
+			
+		}
+		//one parameter submitted (main function).
 		else if(args.length==1)ppiList=this.findProteins(args[0], "FIsInGene.txt");
+		//two parameters or more submitted (main function).
 		else ppiList=this.findProteins(this.findProteins(args[0], "FIsInGene.txt"), args[1]);
+		//Write filtered data to a file
 		this.writeToFile(ppiList, "filteredPPI.txt");
+		//Print out the filtered data
 		for(PPI p:ppiList)System.out.println(p.getGene1()+"\t"+p.getGene2() +
 				"\t"+p.getAnnotation()+"\t"+p.getDirection()+"\t"+p.getScore());
 	}

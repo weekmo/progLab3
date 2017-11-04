@@ -1,32 +1,94 @@
-AAAS	CCNB1	catalyzed by	<-	1.0
-AAAS	CCNB2	catalyzed by	<-	1.0
-AAAS	CDK1	catalyzed by	<-	1.0
-AAAS	NDC1	catalyzed by; complex; input	<-	1.0
-AAAS	NEK6	catalyzed by	<-	1.0
-AAAS	NEK9	catalyzed by	<-	1.0
-AAAS	NUP107	catalyzed by; complex; input	<-	1.0
-AAAS	NUP133	catalyzed by; complex; input	<-	1.0
-AAAS	NUP153	catalyzed by; complex; input	<-	1.0
-AAAS	NUP155	catalyzed by; complex; input	<-	1.0
-AAAS	NUP160	catalyzed by; complex; input	<-	1.0
-AAAS	NUP188	catalyzed by; complex; input	<-	1.0
-AAAS	NUP205	catalyzed by; complex; input	<-	1.0
-AAAS	NUP210	catalyzed by; complex; input	<-	1.0
-AAAS	NUP214	catalyzed by; complex; input	<-	1.0
-AAAS	NUP35	catalyzed by; complex; input	<-	1.0
-AAAS	NUP37	catalyzed by; complex; input	<-	1.0
-AAAS	NUP43	catalyzed by; complex; input	<-	1.0
-AAAS	NUP54	catalyzed by; complex; input	<-	1.0
-AAAS	NUP58	catalyzed by; complex; input	<-	1.0
-AAAS	NUP62	catalyzed by; complex; input	<-	1.0
-AAAS	NUP85	catalyzed by; complex; input	<-	1.0
-AAAS	NUP88	catalyzed by; complex; input	<-	1.0
-AAAS	NUP93	catalyzed by; complex; input	<-	1.0
-AAAS	NUP98	catalyzed by; complex; input	<-	1.0
-AAAS	NUPL2	catalyzed by; complex; input	<-	1.0
-AAAS	POM121	catalyzed by; complex; input	<-	1.0
-AAAS	POM121C	catalyzed by; complex; input	<-	1.0
-AAAS	RAE1	catalyzed by; complex; input	<-	1.0
-AAAS	RANBP2	catalyzed by; complex; input	<-	1.0
-AAAS	SEH1L	catalyzed by; complex; input	<-	1.0
-AAAS	TPR	catalyzed by; complex; input	<-	1.0
+AAAS	AGO2	catalyze	->	1.0
+AAAS	ALYREF	activate; complex	->	1.0
+AAAS	AURKB	catalyze	->	1.0
+AAAS	BIRC5	catalyze	->	1.0
+AAAS	CASC3	activate; complex	->	1.0
+AAAS	CDC40	activate	->	1.0
+AAAS	CDCA8	catalyze	->	1.0
+AAAS	CHTOP	activate	->	1.0
+AAAS	CPSF1	activate	->	1.0
+AAAS	CPSF2	activate	->	1.0
+AAAS	CPSF3	activate	->	1.0
+AAAS	CPSF4	activate	->	1.0
+AAAS	DDX20	activate	->	1.0
+AAAS	DHX38	activate	->	1.0
+AAAS	EIF4A3	activate; complex	->	1.0
+AAAS	EIF4E	activate	->	1.0
+AAAS	FIP1L1	activate	->	1.0
+AAAS	GCK	catalyze	->	1.0
+AAAS	GCKR	catalyze	->	1.0
+AAAS	GEMIN2	activate	->	1.0
+AAAS	GEMIN4	activate	->	1.0
+AAAS	GEMIN5	activate	->	1.0
+AAAS	GEMIN6	activate	->	1.0
+AAAS	GEMIN7	activate	->	1.0
+AAAS	GEMIN8	activate	->	1.0
+AAAS	HIKESHI	catalyze	->	1.0
+AAAS	HNRNPC	catalyze	->	1.0
+AAAS	HSPA1B	catalyze	->	1.0
+AAAS	INCENP	catalyze	->	1.0
+AAAS	IPO8	catalyze	->	1.0
+AAAS	KPNA1	activate; catalyze	->	1.0
+AAAS	KPNA2	catalyze	->	1.0
+AAAS	KPNA3	catalyze	->	1.0
+AAAS	KPNA4	catalyze	->	1.0
+AAAS	KPNA5	catalyze	->	1.0
+AAAS	KPNA7	catalyze	->	1.0
+AAAS	KPNB1	activate; catalyze; complex; input	->	1.0
+AAAS	MAGOH	activate; complex	->	1.0
+AAAS	MAGOHB	activate; complex	->	1.0
+AAAS	NCBP1	activate; complex	->	1.0
+AAAS	NCBP2	activate; complex	->	1.0
+AAAS	NUP50	catalyze; complex; input	->	1.0
+AAAS	NXF1	activate; complex	->	1.0
+AAAS	NXF2	activate; complex	->	1.0
+AAAS	NXT1	activate; complex	->	1.0
+AAAS	PHAX	activate	->	1.0
+AAAS	PML	catalyze	->	1.0
+AAAS	POLDIP3	activate; complex	->	1.0
+AAAS	RAN	activate; catalyze; complex; input	->	1.0
+AAAS	RBM8A	activate; complex	->	1.0
+AAAS	RNPS1	activate; complex	->	1.0
+AAAS	SARNP	activate	->	1.0
+AAAS	SLBP	activate	->	1.0
+AAAS	SLU7	activate	->	1.0
+AAAS	SMN1	activate	->	1.0
+AAAS	SNRPB	activate	->	1.0
+AAAS	SNRPD1	activate	->	1.0
+AAAS	SNRPD2	activate	->	1.0
+AAAS	SNRPD3	activate	->	1.0
+AAAS	SNRPE	activate	->	1.0
+AAAS	SNRPF	activate	->	1.0
+AAAS	SNRPG	activate	->	1.0
+AAAS	SNUPN	activate	->	1.0
+AAAS	SP100	catalyze	->	1.0
+AAAS	SRRM1	activate; complex	->	1.0
+AAAS	SRSF1	activate	->	1.0
+AAAS	SRSF11	activate	->	1.0
+AAAS	SRSF2	activate	->	1.0
+AAAS	SRSF3	activate	->	1.0
+AAAS	SRSF4	activate	->	1.0
+AAAS	SRSF5	activate	->	1.0
+AAAS	SRSF6	activate	->	1.0
+AAAS	SRSF7	activate	->	1.0
+AAAS	SRSF9	activate	->	1.0
+AAAS	SUMO1	catalyze; complex	->	1.0
+AAAS	SUMO2	catalyze	->	1.0
+AAAS	SUMO3	catalyze	->	1.0
+AAAS	SYMPK	activate	->	1.0
+AAAS	THOC1	activate	->	1.0
+AAAS	THOC2	activate	->	1.0
+AAAS	THOC3	activate	->	1.0
+AAAS	THOC5	activate	->	1.0
+AAAS	THOC6	activate	->	1.0
+AAAS	THOC7	activate	->	1.0
+AAAS	TOP2A	catalyze	->	1.0
+AAAS	U2AF1L4	activate	->	1.0
+AAAS	U2AF1L5	activate	->	1.0
+AAAS	U2AF2	activate	->	1.0
+AAAS	UBE2I	catalyze; complex	->	1.0
+AAAS	UPF3B	activate; complex	->	1.0
+AAAS	WDR33	activate	->	1.0
+AAAS	XPO1	activate; complex; input	->	1.0
+AAAS	XPOT	catalyze	->	1.0
+AAAS	ZC3H11A	activate	->	1.0
