@@ -28,7 +28,7 @@ public class Participant {
 		this.height=height;
 		this.iq=iq;
 	}
-	// Properties getter and setter
+	// Properties getters and setters
 	public String getId() {
 		return id;
 	}

@@ -14,13 +14,13 @@ public class App
     public static void main( String[] args )
     {
     	//**** Task 1 ****
-    	//new Task1Executor();
+    	new Task1Executor();
     	
     	//**** Task 2 ****
-    	//new Task2Executor("patients_data.csv");
-    	//new Task2Executor().fromScratch("patients_data.csv");
+    	//There is no BMI greater than 24.
+    	new Task2Executor();
     	
     	//**** Task 2 ****
-    	new Task3Executor();
+    	new Task3Executor(args);
     }
 }

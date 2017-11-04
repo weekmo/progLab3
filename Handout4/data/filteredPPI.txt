@@ -1,0 +1,32 @@
+AAAS	CCNB1	catalyzed by	<-	1.0
+AAAS	CCNB2	catalyzed by	<-	1.0
+AAAS	CDK1	catalyzed by	<-	1.0
+AAAS	NDC1	catalyzed by; complex; input	<-	1.0
+AAAS	NEK6	catalyzed by	<-	1.0
+AAAS	NEK9	catalyzed by	<-	1.0
+AAAS	NUP107	catalyzed by; complex; input	<-	1.0
+AAAS	NUP133	catalyzed by; complex; input	<-	1.0
+AAAS	NUP153	catalyzed by; complex; input	<-	1.0
+AAAS	NUP155	catalyzed by; complex; input	<-	1.0
+AAAS	NUP160	catalyzed by; complex; input	<-	1.0
+AAAS	NUP188	catalyzed by; complex; input	<-	1.0
+AAAS	NUP205	catalyzed by; complex; input	<-	1.0
+AAAS	NUP210	catalyzed by; complex; input	<-	1.0
+AAAS	NUP214	catalyzed by; complex; input	<-	1.0
+AAAS	NUP35	catalyzed by; complex; input	<-	1.0
+AAAS	NUP37	catalyzed by; complex; input	<-	1.0
+AAAS	NUP43	catalyzed by; complex; input	<-	1.0
+AAAS	NUP54	catalyzed by; complex; input	<-	1.0
+AAAS	NUP58	catalyzed by; complex; input	<-	1.0
+AAAS	NUP62	catalyzed by; complex; input	<-	1.0
+AAAS	NUP85	catalyzed by; complex; input	<-	1.0
+AAAS	NUP88	catalyzed by; complex; input	<-	1.0
+AAAS	NUP93	catalyzed by; complex; input	<-	1.0
+AAAS	NUP98	catalyzed by; complex; input	<-	1.0
+AAAS	NUPL2	catalyzed by; complex; input	<-	1.0
+AAAS	POM121	catalyzed by; complex; input	<-	1.0
+AAAS	POM121C	catalyzed by; complex; input	<-	1.0
+AAAS	RAE1	catalyzed by; complex; input	<-	1.0
+AAAS	RANBP2	catalyzed by; complex; input	<-	1.0
+AAAS	SEH1L	catalyzed by; complex; input	<-	1.0
+AAAS	TPR	catalyzed by; complex; input	<-	1.0

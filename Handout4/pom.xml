@@ -27,4 +27,31 @@
     	<version>3.6</version>
     </dependency>
   </dependencies>
+  
+  <build>
+	  <plugins>
+	  	<plugin>
+			<artifactId>maven-resources-plugin</artifactId>
+	    	<version>3.0.2</version>
+			 <executions>
+			 	<execution>
+			    	<id>copy-resources</id>
+			    	<phase>validate</phase>
+			     	<goals>
+			       		<goal>copy-resources</goal>
+			     	</goals>
+				     <configuration>
+				       <outputDirectory>${basedir}/target/classes/data</outputDirectory>
+				       <resources>          
+				         <resource>
+				           <directory>data</directory>
+				           <filtering>true</filtering>
+				         </resource>
+				       </resources>              
+				     </configuration>            
+			   </execution>
+			</executions>
+	  	</plugin>
+	  </plugins>
+  </build>
 </project>
