@@ -17,6 +17,7 @@ import java.util.Scanner;
  * It is a class to execute task3 of handout4 programming lab3
  */
 public class Task3Executor {
+	final String FILENAME="FIsInGene.txt";
 	
 	//Class constructor
 	public Task3Executor(String[] args) {
@@ -29,15 +30,15 @@ public class Task3Executor {
 				String[] line=reader.nextLine().split(" ");
 				//no parameter
 				if(line.length==0) {
-					System.out.println("Please enter gene name and/or direction!");
+					System.out.println("Please enter gene name (and direction)!");
 				}
 				//one parameter
 				else if(line.length==1) {
-					ppiList=this.findProteins(line[0], "FIsInGene.txt");
+					ppiList=this.findProteins(line[0], this.FILENAME);
 				}
 				//two parameters or more (it will take only two)
 				else {
-					ppiList=this.findProteins(this.findProteins(line[0], "FIsInGene.txt"), line[1]);
+					ppiList=this.findProteins(this.findProteins(line[0], this.FILENAME), line[1]);
 				}
 				reader.close();
 			}
@@ -45,9 +46,9 @@ public class Task3Executor {
 			
 		}
 		//one parameter submitted (main function).
-		else if(args.length==1)ppiList=this.findProteins(args[0], "FIsInGene.txt");
+		else if(args.length==1)ppiList=this.findProteins(args[0], this.FILENAME);
 		//two parameters or more submitted (main function).
-		else ppiList=this.findProteins(this.findProteins(args[0], "FIsInGene.txt"), args[1]);
+		else ppiList=this.findProteins(this.findProteins(args[0], this.FILENAME), args[1]);
 		//Write filtered data to a file
 		this.writeToFile(ppiList, "filteredPPI.txt");
 		//Print out the filtered data
