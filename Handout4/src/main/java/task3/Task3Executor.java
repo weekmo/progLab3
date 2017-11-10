@@ -17,8 +17,6 @@ import java.util.Scanner;
  * It is a class to execute task3 of handout4 programming lab3
  */
 public class Task3Executor {
-	final String FILENAME="FIsInGene.txt";
-	
 	//Class constructor
 	public Task3Executor(String[] args) {
 		//New ArrayList of PPI
@@ -26,30 +24,46 @@ public class Task3Executor {
 		//if there is no parameters submission (main function).
 		if(args.length==0) {
 			try {
+				System.out.println("Please enter file name, gene name and/or direction, separator!"+
+						"\nExample:\nfilename.txt genename -> ;");
 				Scanner reader = new Scanner(System.in);
 				String[] line=reader.nextLine().split(" ");
 				//no parameter
-				if(line.length==0) {
-					System.out.println("Please enter gene name (and direction)!");
+				if(line.length<2) {
+					System.out.println("Please enter file name, gene name and/or direction, separator!"+
+							"\nExample:\nfilename.txt genename -> ;");
+					System.exit(1);
 				}
 				//one parameter
-				else if(line.length==1) {
-					ppiList=this.findProteins(line[0], this.FILENAME);
+				else if(line.length==2) {
+					ppiList=this.findProteins(line[1], line[0]);
 				}
 				//two parameters or more (it will take only two)
-				else {
-					ppiList=this.findProteins(this.findProteins(line[0], this.FILENAME), line[1]);
+				else if(line.length==3){
+					ppiList=this.findProteins(this.findProteins(line[1], line[0]), line[2]);
+				}
+				else{
+					ppiList=this.findProteins(this.findProteins(line[1], line[0],line[3]), line[2]);
 				}
 				reader.close();
 			}
 			catch(Exception e) {System.out.println(e.getMessage());}
 			
 		}
+		else if(args.length<2) {
+			System.out.println("Please enter file name, gene name and/or direction, separator!"+
+					"\nExample:\nfilename.txt genename -> ;");
+			System.exit(1);
+		}
 		//one parameter submitted (main function).
-		else if(args.length==1)ppiList=this.findProteins(args[0], this.FILENAME);
+		else if(args.length==2)
+			ppiList=this.findProteins(args[1], args[0]);
 		//two parameters or more submitted (main function).
-		else ppiList=this.findProteins(this.findProteins(args[0], this.FILENAME), args[1]);
+		else if(args.length==3)
+			ppiList=this.findProteins(this.findProteins(args[1], args[0]), args[2]);
 		//Write filtered data to a file
+		else
+			ppiList=this.findProteins(this.findProteins(args[1], args[0],args[3]), args[2]);
 		this.writeToFile(ppiList, "filteredPPI.txt");
 		//Print out the filtered data
 		for(PPI p:ppiList)System.out.println(p.getGene1()+"\t"+p.getGene2() +
