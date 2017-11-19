@@ -35,9 +35,9 @@ public class Exercise3Executor {
 		SimpleGraph<Node, DefaultEdge> benzene=readGraphFromFiles("benzeneVertices.csv","benzeneEdges.csv");
 		
 		VF2SubgraphIsomorphismInspector<Node, DefaultEdge> isoBenzeneInAspirin = 
-				new VF2SubgraphIsomorphismInspector<>(aspirin, benzene);
+				new VF2SubgraphIsomorphismInspector<Node, DefaultEdge>(aspirin, benzene);
 		VF2SubgraphIsomorphismInspector<Node, DefaultEdge> isoBenzeneInIbuprofen = 
-				new VF2SubgraphIsomorphismInspector<>(ibuprofen, benzene);
+				new VF2SubgraphIsomorphismInspector<Node, DefaultEdge>(ibuprofen, benzene);
 		
 		checkAndPrintResult(isoBenzeneInAspirin.isomorphismExists(), "Aspirin");
 		checkAndPrintResult(isoBenzeneInIbuprofen.isomorphismExists(), "Ibuprofen");

@@ -127,7 +127,7 @@ public class Exercise1Executor {
 	 */
 	public void printNodesHeight() {
 		for (String vertex : foodChain.vertexSet() ) {
-		     DijkstraShortestPath<String, DefaultEdge> dijkstraAlg = new DijkstraShortestPath <>(foodChain);
+		     DijkstraShortestPath<String, DefaultEdge> dijkstraAlg = new DijkstraShortestPath <String, DefaultEdge>(foodChain);
 		     int height = Integer.MAX_VALUE; 
 		     for (String b : bases) {
 		     	SingleSourcePaths <String , DefaultEdge > paths = dijkstraAlg.getPaths(b);
