@@ -1,0 +1,12 @@
+﻿VF2 algorithm is implemented by the class VF2SubgraphIsomorphismInspector in JGraphT.
+The process finds a mapping between the two graphs G1 and G2 determines the 
+isomorphism mapping M, which associates vertices G1 with vertices of G2 and vice 
+versa. It can be described by means of a state space representation which is created 
+by the algorithm while exploring the search graph in depth-first fashion.
+Each state s of the matching process can be associated with a partial mapping M(s).
+At each level, the algorithm computes the set of the vertex pairs that are candidates 
+to be added to the current state s.
+If a pair of vertices (v, w) is feasible, the mapping is extended and the associated 
+successor state s' is computed.
+The whole procedure is then repeated for state s'.
+(pdf file is attached as well)
