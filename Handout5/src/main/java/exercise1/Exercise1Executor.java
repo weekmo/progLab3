@@ -1,7 +1,9 @@
 //Package name
 package exercise1;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.jgrapht.DirectedGraph;
@@ -92,7 +94,9 @@ public class Exercise1Executor {
 		}
 		
 		System.out.println("\n***** (List of Nodes and hights) ******");
-		printNodesHeight();
+		for(Entry<String, Integer> vertexHeiht:getNodesHeight().entrySet()) {
+			System.out.println("\nNode: "+vertexHeiht.getKey()+"\nHeight: "+vertexHeiht.getValue());
+		}
 	}
 	/**
 	 * Compute base of food chain
@@ -125,7 +129,8 @@ public class Exercise1Executor {
 	/**
 	 * Print nodes and their heights
 	 */
-	public void printNodesHeight() {
+	public HashMap<String, Integer> getNodesHeight() {
+		HashMap<String, Integer> vertexHeight=new HashMap<String, Integer>();
 		for (String vertex : foodChain.vertexSet() ) {
 		     DijkstraShortestPath<String, DefaultEdge> dijkstraAlg = new DijkstraShortestPath <String, DefaultEdge>(foodChain);
 		     int height = Integer.MAX_VALUE; 
@@ -137,7 +142,8 @@ public class Exercise1Executor {
 					}
 		     	} 
 		     }
-		     System.out.println("\nNode:"+vertex+"\nHeight:"+height);
+		     vertexHeight.put(vertex, height);
 		}
+		return vertexHeight;
 	}
 }
