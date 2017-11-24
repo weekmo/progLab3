@@ -11,7 +11,8 @@ import org.jgrapht.alg.BronKerboschCliqueFinder;
 import org.jgrapht.alg.isomorphism.VF2SubgraphIsomorphismInspector;
 import org.jgrapht.graph.SimpleGraph;
 
-import ecxercise1.Exercise1;
+import exercise1.Exercise1;
+import exercise2.Exercise2;
 
 /**
  * Hello world!
@@ -21,7 +22,7 @@ public class App
 {
     public static void main( String[] args )
     {
-    	new Exercise1();
+    	new Exercise2();
     }
     
     public static void play() {
