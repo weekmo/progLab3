@@ -1,9 +1,23 @@
-package main;
-
+//Package name
+package exercise1;
+/**
+ * Class Document has title, journal and year of publication
+ * @author Laplace
+ *
+ */
 public class Document {
+	/**
+	 * properties
+	 */
 	private String title,journal;
 	private int year;
 	
+	/**
+	 * Class constructor
+	 * @param title Document title
+	 * @param journal Publication journal
+	 * @param year Year of publication
+	 */
 	public Document(String title,String journal,int year) {
 		this.setTitle(title);
 		this.setJournal(journal);
@@ -11,7 +25,7 @@ public class Document {
 	}
 
 	/**
-	 * @return the title
+	 * @return the title Document title
 	 */
 	public String getTitle() {
 		return title;
@@ -39,14 +53,14 @@ public class Document {
 	}
 
 	/**
-	 * @return the year
+	 * @return get year of publication
 	 */
 	public int getYear() {
 		return year;
 	}
 
 	/**
-	 * @param year the year to set
+	 * @param year set year of publication
 	 */
 	public void setYear(int year) {
 		this.year = year;
