@@ -7,170 +7,170 @@ graph
 	node
 	[
 		id 1
-		label "Annalena"
+		label "Marian"
 	]
 	node
 	[
 		id 2
-		label "Claire"
+		label "Jara"
 	]
 	node
 	[
 		id 3
-		label "Uwe"
+		label "Mirac"
 	]
 	node
 	[
 		id 4
-		label "Leni"
+		label "Kimi"
 	]
 	node
 	[
 		id 5
-		label "Soraya"
+		label "Michael"
 	]
 	node
 	[
 		id 6
-		label "Kimberly"
+		label "Rahel"
 	]
 	node
 	[
 		id 7
-		label "Wilhelm"
+		label "Markus"
 	]
 	node
 	[
 		id 8
-		label "Sofia"
+		label "Laura"
 	]
 	node
 	[
 		id 9
-		label "Willy"
+		label "Riana"
 	]
 	node
 	[
 		id 10
-		label "Jamie"
+		label "Ron"
 	]
 	node
 	[
 		id 11
-		label "Luc"
+		label "Katja"
 	]
 	node
 	[
 		id 12
-		label "Collien"
+		label "Onur"
 	]
 	node
 	[
 		id 13
-		label "Inga"
+		label "Caspar"
 	]
 	node
 	[
 		id 14
-		label "Angelo"
+		label "Amelia"
 	]
 	node
 	[
 		id 15
-		label "Laurenz"
+		label "Evelyn"
 	]
 	node
 	[
 		id 16
-		label "Ryan"
+		label "Jella"
 	]
 	node
 	[
 		id 17
-		label "Juliana"
+		label "Raik"
 	]
 	node
 	[
 		id 18
-		label "Friedrich"
+		label "Ali"
 	]
 	node
 	[
 		id 19
-		label "Silja"
+		label "Jaron"
 	]
 	node
 	[
 		id 20
-		label "Jane"
+		label "Ömer"
 	]
 	edge
 	[
 		id 1
 		source 1
-		target 10
-		label "weak"
+		target 6
+		label "strong"
 	]
 	edge
 	[
 		id 2
 		source 1
-		target 11
+		target 8
 		label "strong"
 	]
 	edge
 	[
 		id 3
 		source 1
-		target 14
-		label "strong"
+		target 12
+		label "weak"
 	]
 	edge
 	[
 		id 4
 		source 1
-		target 20
+		target 16
 		label "strong"
 	]
 	edge
 	[
 		id 5
-		source 2
-		target 15
+		source 1
+		target 19
 		label "strong"
 	]
 	edge
 	[
 		id 6
 		source 2
-		target 16
-		label "weak"
+		target 9
+		label "strong"
 	]
 	edge
 	[
 		id 7
-		source 3
-		target 5
-		label "weak"
+		source 2
+		target 16
+		label "strong"
 	]
 	edge
 	[
 		id 8
 		source 3
-		target 19
-		label "weak"
+		target 10
+		label "strong"
 	]
 	edge
 	[
 		id 9
-		source 4
-		target 14
-		label "weak"
+		source 3
+		target 13
+		label "strong"
 	]
 	edge
 	[
 		id 10
-		source 4
+		source 3
 		target 15
 		label "weak"
 	]
@@ -178,147 +178,161 @@ graph
 	[
 		id 11
 		source 4
-		target 17
-		label "weak"
+		target 14
+		label "strong"
 	]
 	edge
 	[
 		id 12
-		source 5
-		target 7
-		label "weak"
+		source 4
+		target 20
+		label "strong"
 	]
 	edge
 	[
 		id 13
 		source 5
-		target 9
+		target 7
 		label "strong"
 	]
 	edge
 	[
 		id 14
 		source 5
-		target 20
-		label "weak"
+		target 16
+		label "strong"
 	]
 	edge
 	[
 		id 15
 		source 6
-		target 7
-		label "weak"
-	]
-	edge
-	[
-		id 16
-		source 6
-		target 10
-		label "weak"
-	]
-	edge
-	[
-		id 17
-		source 6
-		target 20
-		label "strong"
-	]
-	edge
-	[
-		id 18
-		source 7
 		target 11
 		label "strong"
 	]
 	edge
 	[
-		id 19
-		source 7
-		target 13
-		label "weak"
-	]
-	edge
-	[
-		id 20
-		source 7
-		target 14
-		label "strong"
-	]
-	edge
-	[
-		id 21
-		source 8
-		target 12
-		label "weak"
-	]
-	edge
-	[
-		id 22
-		source 8
-		target 19
-		label "strong"
-	]
-	edge
-	[
-		id 23
-		source 8
+		id 16
+		source 6
 		target 20
 		label "strong"
 	]
 	edge
 	[
-		id 24
+		id 17
+		source 7
+		target 8
+		label "weak"
+	]
+	edge
+	[
+		id 18
+		source 8
+		target 14
+		label "weak"
+	]
+	edge
+	[
+		id 19
+		source 8
+		target 15
+		label "weak"
+	]
+	edge
+	[
+		id 20
+		source 8
+		target 16
+		label "weak"
+	]
+	edge
+	[
+		id 21
+		source 8
+		target 20
+		label "weak"
+	]
+	edge
+	[
+		id 22
+		source 9
+		target 13
+		label "strong"
+	]
+	edge
+	[
+		id 23
 		source 9
 		target 14
 		label "strong"
 	]
 	edge
 	[
-		id 25
-		source 10
-		target 18
-		label "strong"
-	]
-	edge
-	[
-		id 26
-		source 11
-		target 14
-		label "strong"
-	]
-	edge
-	[
-		id 27
-		source 11
-		target 15
-		label "weak"
-	]
-	edge
-	[
-		id 28
-		source 12
+		id 24
+		source 9
 		target 19
 		label "strong"
 	]
 	edge
 	[
+		id 25
+		source 9
+		target 20
+		label "weak"
+	]
+	edge
+	[
+		id 26
+		source 10
+		target 11
+		label "strong"
+	]
+	edge
+	[
+		id 27
+		source 10
+		target 19
+		label "weak"
+	]
+	edge
+	[
+		id 28
+		source 11
+		target 12
+		label "weak"
+	]
+	edge
+	[
 		id 29
-		source 13
-		target 15
+		source 11
+		target 17
 		label "strong"
 	]
 	edge
 	[
 		id 30
-		source 15
-		target 18
+		source 12
+		target 17
 		label "strong"
 	]
 	edge
 	[
 		id 31
-		source 19
-		target 20
+		source 12
+		target 18
 		label "strong"
+	]
+	edge
+	[
+		id 32
+		source 12
+		target 20
+		label "weak"
+	]
+	edge
+	[
+		id 33
+		source 15
+		target 16
+		label "weak"
 	]
 ]

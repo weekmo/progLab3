@@ -24,14 +24,15 @@ public class App
 	    		new Exercise1(reader.nextLine());
 	    		reader.reset();
 	    		
-	    		System.out.println("Please enter number of nodes for EX2:");
+	    		System.out.println("\nPlease enter number of nodes for EX2:");
 	    		//new Exercise2(20);
 	    		new Exercise2(Integer.parseInt(reader.nextLine()));
 	    		reader.reset();
 
-	    		System.out.println("Please enter file name, sorce gene and target gene respectivly:\n"
-	    				+ "pleas leave space between them!");
-	    		//new Exercise3("filteredFIsInGene.csv","VAMP2","BAG3");
+	    		System.out.println("\nPlease enter file name, sorce gene and target gene respectivly\n"
+	    				+ "and pleas leave space between them like!\n"
+	    				+ "filterredFIsInGene2.csv AAAS EIF4A1");
+	    		//new Exercise3("filterredFIsInGene2.csv","AAAS","EIF4A1");
 	    		String[] attr = reader.nextLine().split(" ");
 	    		new Exercise3(attr[0],attr[1],attr[2]);
 	    		reader.close();

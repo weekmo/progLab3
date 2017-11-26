@@ -27,6 +27,7 @@ A2M	KLKB1	complex; input	-	1
 A2M	MMP1	complex; input	-	1
 A2M	MMP13	complex; input	-	1
 A2M	MMP3	complex; input	-	1
+A2M	PROC	PPrel: inhibition	-|	1
 A2M	RAC1	catalyze	->	1
 A2M	RAC2	catalyze	->	1
 A2M	RAC3	catalyze	->	1
@@ -207,6 +208,8 @@ AAG1	EIF2S1	complex; reaction	-	1
 AAG1	EIF2S2	complex; input	-	1
 AAG1	EIF2S3L	complex; input	-	1
 AAG1	EIF3A	complex; input	-	1
+AAG1	EIF4A1	PPrel: binding/association; complex; input	-	1
+AAG1	EIF4E	PPrel: binding/association; complex; input	-	1
 AAG1	PTBP1	complex; input	-	1
 AAK1	ACTR2	complex; input	-	1
 AAK1	ACTR3	complex; input	-	1

@@ -15,6 +15,12 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 /**
  * Exercise 3 executor
+ * It is a bit confusing when we want to filter the file, if follow the instruction,
+ *  it means only annotation that start with activat, catalyz and inhibit.
+ *  and only has "complex". then we will end up with file "filterredFIsInGene.csv".
+ *  Or if we say that annotation column that has these values, then we will end up with
+ *  "filterredFIsInGene2.csv".
+ *  
  * @author Laplace
  *
  */
@@ -36,10 +42,10 @@ public class Exercise3 {
 			direction= path.getPath(gene2);
 			if(direction !=null) {
 				for(String node:direction.getVertexList())
-					if(node.equals(direction.getStartVertex()) || node.equals(direction.getEndVertex()))
+					if(node.equals(direction.getEndVertex()))
 						System.out.print(node);
 					else
-						System.out.print(" -> "+node+" -> ");
+						System.out.print(node+" -> ");
 			}
 			else {
 				System.out.println("There is no path from "+gene1+" and "+gene2);

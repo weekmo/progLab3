@@ -14,6 +14,11 @@ import org.jgrapht.graph.SimpleGraph;
 
 import com.github.javafaker.Faker;
 
+/**
+ * Exercise 2 executor
+ * @author Laplace
+ *
+ */
 @SuppressWarnings("deprecation")
 public class Exercise2 {
 
