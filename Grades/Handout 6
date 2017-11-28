@@ -1,0 +1,49 @@
+Handout 6
+
+It is not the right behavior to wait for user input if no command line arguments are passed. 
+Also, it is not a good idea to store all tasks in one single application. Who should use it this way? 
+Bad naming convention: App.java – what does that mean? -1P
+When I simply press enter, I get a lot of exceptions. You should better check the user input. Also I do not have the chance to test one of the exercises alone. For further handouts please split your application according to the exercises. 
+
+Task 1
+- Output is not really human-readable.
+- The class Documents is not well-structured. How are all these methods related to documents? You have a mixture between private variables and variables which are generated on the fly.
+- The following code is wrong:
+        if(avg%1==0)
+        	System.out.println((int)avg);
+        else
+        	System.out.println((int)avg+" and "+(int)avg+1);
+I assume it is used to print integer years. But the results are somehow wrong (prints only one value) and why do you assume that the average is an integer? -0.5P
+- Although it is possible, you should use brackets for your if-else environments:
+ 	if(avg%1==0)
+        	System.out.println((int)avg);
+        else
+        	System.out.println((int)avg+" and "+(int)avg+1);
+3.5/4
+
+Task 2
+- It was asked to use “GnpRandomGraphGenerator” - you wrote your own class which inherited from this class. This is nice, but I cannot see any advantage for doing this. 
+- I cannot find any explanation for your choice of random variables. -1P
+- I am not able to distinguish between strong and weak ties in your screenshot. -0.5P
+2.5/4
+
+Task 3
+- Example run I did:
+
+GML file can be found in data folder as SocialNetwork.gml
+Please enter file name, sorce gene and target gene respectivly:
+pleas leave space between them!
+FIsInGene.csv AAAS THOC1
+AAASTHOC1
+
+
+I cannot understand what it is supposed to show.
+
+- There does not seem to be any filtering of annotation “activat*”, “catalyz*”, “complex”, and “inhibit*”, -1P.
+- There is a function (SimpleDirectedWeightedGraph) to create the required graph but it is not used, -1P.
+- The edges seem to be added correctly to the non-used code.
+- I was not able to understand how the shortest path is printed, -1P. You will have to present your solution and then get points.
+
+1/4
+
+Sum 6/10
