@@ -21,5 +21,16 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+    	<groupId>net.imagej</groupId>
+    	<artifactId>ij</artifactId>
+    	<version>1.51n</version>
+    </dependency>
   </dependencies>
+  <repositories>
+  	<repository>
+  		<id>imagej.public</id>
+  		<url>http://maven.imagej.net/content/groups/public</url>
+  	</repository>
+  </repositories>
 </project>
