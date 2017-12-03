@@ -1,0 +1,75 @@
+Creator "JGraphT GML Exporter"
+Version 1
+graph
+[
+	label ""
+	directed 0
+	node
+	[
+		id 3539452
+		label "The Development and Activity-Dependent Expression of Aggrecan in the Cat Visual Cortex"
+	]
+	node
+	[
+		id 3531190
+		label "GenBank"
+	]
+	node
+	[
+		id 1346802
+		label "Lack of Pharmacokinetic Interaction between Linezolid and Antacid in Healthy Volunteers"
+	]
+	node
+	[
+		id 1632469
+		label "What price the ambulance? A survey of psychiatric day-patient transport"
+	]
+	edge
+	[
+		id 1
+		source 3539452
+		target 3531190
+		label "(exercise1.Document@192d3247 : exercise1.Document@3ecd23d9)"
+		weight 0.125
+	]
+	edge
+	[
+		id 2
+		source 3539452
+		target 1346802
+		label "(exercise1.Document@192d3247 : exercise1.Document@569cfc36)"
+		weight 0.13333333333333333
+	]
+	edge
+	[
+		id 3
+		source 3539452
+		target 1632469
+		label "(exercise1.Document@192d3247 : exercise1.Document@43bd930a)"
+		weight 0.2222222222222222
+	]
+	edge
+	[
+		id 4
+		source 3531190
+		target 1346802
+		label "(exercise1.Document@3ecd23d9 : exercise1.Document@569cfc36)"
+		weight 0.13333333333333333
+	]
+	edge
+	[
+		id 5
+		source 3531190
+		target 1632469
+		label "(exercise1.Document@3ecd23d9 : exercise1.Document@43bd930a)"
+		weight 0.2222222222222222
+	]
+	edge
+	[
+		id 6
+		source 1346802
+		target 1632469
+		label "(exercise1.Document@569cfc36 : exercise1.Document@43bd930a)"
+		weight 0.25
+	]
+]
