@@ -48,7 +48,6 @@ import org.json.JSONObject;
 @SuppressWarnings("deprecation")
 public class Executor {
 
-	// 3531190 3539452
 	public static void main(String[] args) {
 
 		// Create and initialise objects
@@ -111,15 +110,13 @@ public class Executor {
 			try {
 				response = httpClient.execute(httpGet);
 				JSONObject obj = new JSONObject(EntityUtils.toString(response.getEntity()));
-				if (!obj.getJSONObject("result").getJSONObject(id).has("title")) {
-					//System.out.println("Document not found: " + id);
-					continue;
+				if (obj.getJSONObject("result").getJSONObject(id).has("title")) {
+					String title = obj.getJSONObject("result").getJSONObject(id).getString("title");
+					JSONArray authors = obj.getJSONObject("result").getJSONObject(id).getJSONArray("authors");
+					int pubYear = Integer
+							.parseInt(obj.getJSONObject("result").getJSONObject(id).getString("pubdate").split(" ")[0]);
+					documents.add(new Document(Integer.parseInt(id), title, pubYear, authors));
 				}
-				String title = obj.getJSONObject("result").getJSONObject(id).getString("title");
-				JSONArray authors = obj.getJSONObject("result").getJSONObject(id).getJSONArray("authors");
-				int pubYear = Integer
-						.parseInt(obj.getJSONObject("result").getJSONObject(id).getString("pubdate").split(" ")[0]);
-				documents.add(new Document(Integer.parseInt(id), title, pubYear, authors));
 			} catch (ClientProtocolException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
@@ -168,6 +165,7 @@ public class Executor {
 				.getBiggestMaximalCliques();
 		for (Set<Document> set : largestClique) {
 			for (Document doc : set) {
+				System.out.println(doc.hashCode());
 				System.out.println("PMC ID: " + doc.getPmcID());
 				System.out.println("Title: " + doc.getTitle());
 				System.out.println("Publication Year: " + doc.getYear() + "\n");
@@ -193,25 +191,14 @@ public class Executor {
 
 			public String getName(Document component) {
 				// TODO Auto-generated method stub
-				return component.getPmcID() + "";
+				return String.valueOf(component.getPmcID());
 			}
 		};
 
-		ComponentNameProvider<DefaultWeightedEdge> edge1Label = new ComponentNameProvider<DefaultWeightedEdge>() {
-
-			public String getName(DefaultWeightedEdge component) {
-				// TODO Auto-generated method stub
-				return component.toString();
-			}
-		};
+		ComponentNameProvider<DefaultWeightedEdge> edge1Label = new IntegerEdgeNameProvider<DefaultWeightedEdge>();
 		ComponentNameProvider<DefaultWeightedEdge> edge1Id = new IntegerEdgeNameProvider<DefaultWeightedEdge>();
 		ComponentNameProvider<DefaultEdge> edge2ID = new IntegerEdgeNameProvider<DefaultEdge>();
-		ComponentNameProvider<DefaultEdge> edge2Label = new ComponentNameProvider<DefaultEdge>() {
-
-			public String getName(DefaultEdge component) {
-				return component.toString();
-			}
-		};
+		ComponentNameProvider<DefaultEdge> edge2Label = new IntegerEdgeNameProvider<DefaultEdge>();
 
 		// Create and setup graphs exporters
 		GmlExporter<Document, DefaultWeightedEdge> weightedGraphExporter = new GmlExporter<Document, DefaultWeightedEdge>(
@@ -245,7 +232,7 @@ public class Executor {
 		URI apiUri = null;
 		try {
 			apiUri = new URIBuilder().setScheme("https").setHost("eutils.ncbi.nlm.nih.gov")
-					.setPath("/entrez/eutils/esummary.fcgi").setParameter("db", "pmc").setParameter("id", id)
+					.setPath("/entrez/eutils/esummary.fcgi").setParameter("db", "pubmed").setParameter("id", id)
 					.setParameter("retmode", "json").build();
 		} catch (URISyntaxException e1) {
 			e1.printStackTrace();
