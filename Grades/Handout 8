@@ -1,7 +1,9 @@
 Handout 8
 
 Task 1: 2/2
-Task 2: 4/4
+Task 2: 
+- Why do you use analyzer.showDialog();?
+4/4
 Task 3: 
 I had a problem with a maven dependency:
 
