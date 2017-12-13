@@ -1,0 +1,17 @@
+Handout 8
+
+Task 1: 2/2
+Task 2: 4/4
+Task 3: 
+I had a problem with a maven dependency:
+
+Missing artifact sc.fiji:Trainable_Segmentation:jar:3.2.20
+
+In:
+    <dependency>
+	  <groupId>sc.fiji</groupId>
+	  <artifactId>Trainable_Segmentation</artifactId>
+	  <version>3.2.20</version>
+	</dependency>
+
+Sum: 6/10
