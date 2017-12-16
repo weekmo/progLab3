@@ -10,4 +10,7 @@ file to change data folder.<br/>
 ## Additional Files ##
 * particlePipeline.sh
 * handout8Ex2.jar
+<<<<<<< HEAD
 
+=======
+>>>>>>> 163dcdab5c2ceacdad337e40dd56128af1dbe8e6
