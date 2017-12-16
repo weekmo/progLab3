@@ -3,6 +3,7 @@
 **How to use it**<br/>
 It contans *particlePipeline.sh* which can be executed by typing:<br/>
 >*./particlePipeline.sh [input folder or file] [output folder or file]*<br/>
+>
 in the command line.
 It also contains *handout8Ex2.jar* which has all neccesary files to run the applications<br/>
 except *data* folder which contains sample images, the user can edit the *particlePipeline.sh*<br/>
