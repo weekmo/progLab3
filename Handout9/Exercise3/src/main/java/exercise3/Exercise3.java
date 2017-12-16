@@ -117,7 +117,7 @@ public class Exercise3 {
 		}else if(outputValue.equalsIgnoreCase("screen")) {
 			// Print to screen
 			int space = meshHedingListCollection.getLongestName();
-			System.out.println(String.format("%-13s|%-"+space+"s|%s" , "UI", "MeSH Name","Total"));
+			System.out.println(String.format("%-13s|%-"+space+"s|%s" , "UI", "MeSH Name","Total = "+meshHedingListCollection.getTotal()));
 			for(int i=0;i<(20+space);i++)System.out.print("-");
 			System.out.println("");
 			for(MeshHeading mesh:meshHedingListCollection.getMeshHedingList()) {

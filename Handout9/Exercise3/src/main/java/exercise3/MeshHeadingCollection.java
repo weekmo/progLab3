@@ -84,4 +84,16 @@ public class MeshHeadingCollection {
 		if(max>this.longestName)
 			this.longestName=max;
 	}
+	
+	/**
+	 * Get total number of MeSH terms
+	 * @return total number of MeSH terms
+	 */
+	public int getTotal() {
+		int sum=0;
+		for(MeshHeading mesh:this.getMeshHedingList()) {
+			sum+=mesh.getCounter();
+		}
+		return sum;
+	}
 }
