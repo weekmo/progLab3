@@ -1,6 +1,5 @@
 # Programming Lab III - Handout9 - Exercise2 #
----------------------------------------------------
-## How to use it ## <br/>
+## How to use it <br/>
 It contans *particlePipeline.sh* which can be executed by typing:<br/>
 > *./particlePipeline.sh [input folder or file] [output folder or file]*
 
