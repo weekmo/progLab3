@@ -25,6 +25,9 @@ import ij.process.ImageConverter;
  * 		2- Output folder: --output-folder or simply -o
  * 		3- Image(s) format (optional): --format or simply -f
  * 
+ * Example: -i data -o new-folder -f png
+ * or	  : -i data -o new-folder
+ * 
  * @author laplace
  *
  */
@@ -77,7 +80,7 @@ public class Exercise1 {
 		
 		//Check image format sent by user
 		if(formatValue!=null&&!isSupported(formatValue)) {
-			System.err.println("Sorry, image format '"+formatValue+"' is not supported!");
+			System.err.println("Sorry, image format '"+formatValue+"' is not supported. Try again");
 			System.exit(1);
 		}
 		//Get all files in input folders
@@ -99,7 +102,6 @@ public class Exercise1 {
 						e.printStackTrace();
 					}
 				}else {
-					//IJ.saveAs(new ImagePlus(inFolderName+"/"+imageName), formatValue, outFolderName+"/"+imageName);
 					imageSaver(new ImagePlus(inFolderName+"/"+imageName), formatValue, outFolderName);
 				}
 		    }

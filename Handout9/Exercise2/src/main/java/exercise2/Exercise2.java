@@ -17,7 +17,7 @@ import ij.plugin.filter.ParticleAnalyzer;
 import ij.process.ImageConverter;
 /**
  * A class to solve Handout9 - exercise2, the exercise is about Particle Analyses Pipeline. it takes
- * images and counts the contents of these images depends on threshold method used.
+ * images and counts the contents of these images.
  * the application takes several command line arguments:
  * 		input: It can be a file or an image that specified by argument --type or simply -t,
  * 				the folder name that contains original images or a single images name has to be submitted.
@@ -53,7 +53,7 @@ public class Exercise2 {
 			cmd = parser.parse(options, args);
 		} catch (ParseException e) {
 			e.printStackTrace();
-			formatter.printHelp("Exercise2 - Reading images from a folder", options);
+			formatter.printHelp("Exercise2 - Particle Analyses Pipeline", options);
 			System.exit(1);
 			return;
 		}

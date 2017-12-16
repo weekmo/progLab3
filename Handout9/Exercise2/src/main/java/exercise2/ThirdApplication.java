@@ -6,6 +6,15 @@ import java.io.InputStreamReader;
 
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
+/**
+ * Class contains solution for Handout8-Exercise9 part 3&4
+ * The class reads streamed data by class Exercise2 and run statistical
+ * calculation to print out Min, Max and average for cells
+ * to run the application, the user has to run Exercise2 in command line
+ * and pipe the result to this class.
+ * @author laplace
+ *
+ */
 public class  ThirdApplication{
 
 	public static void main(String[] args) {
@@ -16,7 +25,6 @@ public class  ThirdApplication{
 		try {
 			while((text=reader.readLine())!=null) {
 				value = Double.parseDouble(text.split(":")[1]);
-				//System.out.println(value);
 				stats.addValue(value);
 			}
 		} catch (IOException e) {
