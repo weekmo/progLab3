@@ -9,5 +9,5 @@ It also contains *handout8Ex2.jar* which has all neccesary files to run the appl
 except *data* folder which contains sample images, the user can edit the *particlePipeline.sh*<br/>
 file to change data folder.
 **Files**<br/>
-*particlePipeline.sh
-*handout8Ex2.jar
+* particlePipeline.sh
+* handout8Ex2.jar
