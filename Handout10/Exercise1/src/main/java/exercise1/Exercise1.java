@@ -34,7 +34,7 @@ import org.xml.sax.SAXException;
  *
  */
 
-public class Exercise1Executer {
+public class Exercise1 {
 
 	public static void main(String[] args) {
 		// Create and initialise command line objects
@@ -93,6 +93,7 @@ public class Exercise1Executer {
 		Document docMeta=null;
 		try {
 			urlMeta=new URL(url+"xml");
+			//We can get the fasta sequence from the xml file.
 			urlFasta=new URL(url+"fasta&download=fasta");
 			docMeta =DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(urlMeta.openStream());
 		} catch (SAXException e) {
