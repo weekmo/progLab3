@@ -10,11 +10,10 @@ import org.apache.commons.cli.ParseException;
 import org.biojava.nbio.alignment.Alignments;
 import org.biojava.nbio.alignment.Alignments.PairwiseSequenceAlignerType;
 import org.biojava.nbio.alignment.SimpleGapPenalty;
-import org.biojava.nbio.alignment.SubstitutionMatrixHelper;
-import org.biojava.nbio.alignment.template.GapPenalty;
 import org.biojava.nbio.alignment.template.PairwiseSequenceAligner;
-import org.biojava.nbio.alignment.template.SequencePair;
-import org.biojava.nbio.alignment.template.SubstitutionMatrix;
+import org.biojava.nbio.core.alignment.matrices.SubstitutionMatrixHelper;
+import org.biojava.nbio.core.alignment.template.SequencePair;
+import org.biojava.nbio.core.alignment.template.SubstitutionMatrix;
 import org.biojava.nbio.core.exceptions.CompoundNotFoundException;
 import org.biojava.nbio.core.sequence.DNASequence;
 import org.biojava.nbio.core.sequence.ProteinSequence;
@@ -79,10 +78,10 @@ public class Exercise3 {
 		IDNA dna2=new NCBISequenceApi(id2Value);
 		
 		if(cmd.hasOption("dna")) {
-			printDNAAlignment(dna1.getSequence(), dna2.getSequence());
+			printDnaAlignedSequence(dna1.getSequence(), dna2.getSequence());
 		}
 		if(cmd.hasOption("protein") || cmd.getOptions().length==2) {
-			printAAAlignment(dna1.getProtein().get(0).getSequence(), dna2.getProtein().get(0).getSequence());
+			printProteinAlignedSequence(dna1.getProtein().get(0).getSequence(), dna2.getProtein().get(0).getSequence());
 		}
 		
 	}
@@ -92,7 +91,7 @@ public class Exercise3 {
 	 * @param seq1
 	 * @param seq2
 	 */
-	static void printDNAAlignment(String seq1,String seq2) {
+	static void printDnaAlignedSequence(String seq1,String seq2) {
 	
 		DNASequence dna1Sequence=null;
 		DNASequence dna2Sequence=null;
@@ -103,24 +102,19 @@ public class Exercise3 {
 			e.printStackTrace();
 		}
 
-		SubstitutionMatrix<NucleotideCompound> matrix = SubstitutionMatrixHelper.getNuc4_2();
-
-		GapPenalty penalty = new SimpleGapPenalty();
-
-		int gop = 8;
-		int extend = 1;
-		penalty.setOpenPenalty(gop);
-		penalty.setExtensionPenalty(extend);
+		SubstitutionMatrix<NucleotideCompound> matrix = SubstitutionMatrixHelper.getNuc4_4();
 
 		PairwiseSequenceAligner<DNASequence, NucleotideCompound> aligner =
-				Alignments.getPairwiseAligner(dna1Sequence, dna2Sequence, PairwiseSequenceAlignerType.LOCAL, penalty, matrix);
+				Alignments.getPairwiseAligner(dna1Sequence, dna2Sequence,
+						PairwiseSequenceAlignerType.LOCAL, new SimpleGapPenalty(5, 1), matrix);
 		SequencePair<DNASequence, NucleotideCompound> pair = aligner.getPair();
-		System.out.println("Local alignment (Smith-Waterman algorithm)");
+		System.out.println("\t*** DNA Local alignment (Smith-Waterman algorithm) ***\n");
 		System.out.println(pair.toString(60));
 		
-		aligner =Alignments.getPairwiseAligner(dna1Sequence, dna2Sequence, PairwiseSequenceAlignerType.GLOBAL, penalty, matrix);
+		aligner =Alignments.getPairwiseAligner(dna1Sequence, dna2Sequence,
+				PairwiseSequenceAlignerType.GLOBAL, new SimpleGapPenalty(), matrix);
 		pair = aligner.getPair();
-		System.out.println("Global alignment (Needleman-Wunsch algorithm)");
+		System.out.println("\t*** DNA Global alignment (Needleman-Wunsch algorithm) ***\n");
 		System.out.println(pair.toString(60));
 	}
 	
@@ -129,7 +123,7 @@ public class Exercise3 {
 	 * @param seq1
 	 * @param seq2
 	 */
-	static void printAAAlignment(String seq1,String seq2) {
+	static void printProteinAlignedSequence(String seq1,String seq2) {
 		ProteinSequence protein1Sequence=null;
 		ProteinSequence protein2Sequence=null;
 		try {
@@ -141,21 +135,17 @@ public class Exercise3 {
 		
 		SubstitutionMatrix<AminoAcidCompound> matrix = SubstitutionMatrixHelper.getBlosum65();
 
-		GapPenalty penalty = new SimpleGapPenalty();
-
-		int gop = 8;
-		int extend = 1;
-		penalty.setOpenPenalty(gop);
-		penalty.setExtensionPenalty(extend);
-
-
 		PairwiseSequenceAligner<ProteinSequence, AminoAcidCompound> aligner =
-				Alignments.getPairwiseAligner(protein1Sequence, protein2Sequence, PairwiseSequenceAlignerType.LOCAL, penalty, matrix);
+				Alignments.getPairwiseAligner(protein1Sequence, protein2Sequence,
+						PairwiseSequenceAlignerType.LOCAL, new SimpleGapPenalty(8, 1), matrix);
 		SequencePair<ProteinSequence, AminoAcidCompound> pair = aligner.getPair();
+		System.out.println("\t*** Protein Local alignment (Smith-Waterman algorithm) ***\n");
 		System.out.println(pair.toString(60));
 		
-		aligner =Alignments.getPairwiseAligner(protein1Sequence, protein2Sequence, PairwiseSequenceAlignerType.GLOBAL, penalty, matrix);
+		aligner =Alignments.getPairwiseAligner(protein1Sequence, protein2Sequence,
+				PairwiseSequenceAlignerType.GLOBAL, new SimpleGapPenalty(), matrix);
 		pair = aligner.getPair();
+		System.out.println("\t*** Protein Global alignment (Needleman-Wunsch algorithm) ***\n");
 		System.out.println(pair.toString(60));
 	}
 }

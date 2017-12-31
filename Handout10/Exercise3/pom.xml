@@ -25,7 +25,7 @@
 	<dependency>
 	    <groupId>org.biojava</groupId>
 	    <artifactId>biojava-alignment</artifactId>
-	    <version>4.1.0</version>
+	    <version>4.2.10</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
 	<dependency>
